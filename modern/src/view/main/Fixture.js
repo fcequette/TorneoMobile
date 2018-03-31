@@ -15,8 +15,8 @@
          grouped: true,
          itemTpl: [
              '<div class="headshot" style="background-image:url(resources/images/headshots/{equipo1});"></div>',
-             '{equipo1} <a style="color:red;font-style:bold">({fixture_goles_eq1})</a>  {equipo2} <a style="color:red;font-style:bold">({fixture_goles_eq2})</a></br>',
-             ' <strong>Cancha: </strong> {cancha},  <strong>Turno:</strong> {turno_descri}'
+             '{equipo1}<tpl if="fixture_estado == \'1\'"> <strong> VS </strong> </tpl>  <tpl if="fixture_estado == \'0\'"><a style="color:red;font-style:bold">({fixture_goles_eq1})</a></tpl>  {equipo2} <tpl if="fixture_estado == \'0\'"> <a style="color:red;font-style:bold">({fixture_goles_eq2})</a></tpl></br>',
+             '<tpl if="fixture_estado == \'1\'"><strong>Cancha: </strong> {cancha},  <strong>Turno:</strong> {turno_descri}</tpl>'
          ].join('')
      }
  });
