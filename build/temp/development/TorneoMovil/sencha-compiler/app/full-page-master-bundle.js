@@ -1,2 +1,2 @@
 // @tag full-page
-// @require C:\wamp64\www\TorneoMovil\app.js
+// @require C:\wamp64\www\GCL\TorneoMobile\app.js

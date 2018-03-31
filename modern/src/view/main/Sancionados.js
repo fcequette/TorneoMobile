@@ -46,13 +46,6 @@ Ext.define('TorneoMovil.view.main.Sancionados', {
             ,sortable:false
 
           },{
-            text: 'Vuelve'
-            ,name: 'sancionados_vuelve'
-            ,dataIndex: 'sancionados_vuelve'
-            ,width:80
-            ,sortable:false
-
-          },{
             text: 'Sancion'
             ,name: 'Nombre jugador'
             ,dataIndex: 'sancion'

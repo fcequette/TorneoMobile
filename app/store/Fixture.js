@@ -3,11 +3,17 @@ Ext.define('TorneoMovil.store.Fixture', {
 	,storeId: 'Fixture'
 	,alias: 'store.fixture'
 //,autoLoad: true
-	// ,groupField: 'fecha'
-	,grouper : {
-			property : 'fecha',
-			sortProperty : 'group_index',
-	}
+//	 ,groupField: 'fecha'
+	// ,grouper : {
+	// 		property : 'fecha',
+	// 		sortProperty : 'group_index',
+	// }
+	,grouper: {
+		groupFn: function(record) {
+				return '<a style="color:black">FECHA '+ record.get('fecha')[0]+'</a>';
+		}
+}
+	//  groupField: 'department',
 	//,model:'Plani.model.Fixtures'
 	// ,alias: 'store.fixture'
 	,fields: [
@@ -16,7 +22,7 @@ Ext.define('TorneoMovil.store.Fixture', {
 	,{name: 'vs' ,defaultValue:'VS'}
 	,{name: 'imagen1'}
 	,{name: 'imagen2'}
-	,{name: 'fecha'}
+	//,{name: 'fecha'}
 
 ]
 	,proxy: {
