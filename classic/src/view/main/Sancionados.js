@@ -2,7 +2,7 @@
 /**
  * This view is an example list of people.
  */
-Ext.define('TorneoMovil.view.main.Sancionados', {
+Ext.define('Torneo.view.main.Sancionados', {
     extend: 'Ext.container.Container',
     xtype: 'mainsancionados',
     title:'Sancionados',
@@ -13,7 +13,7 @@ Ext.define('TorneoMovil.view.main.Sancionados', {
     height:'100%',
    // modal: true,
     bodyPadding: 10
-
+,scrollable:true
     ,items:[{
         xtype:'grid'
       ,store: 'Sancionados'
@@ -37,6 +37,7 @@ Ext.define('TorneoMovil.view.main.Sancionados', {
             ,dataIndex: 'jugador_nombre'
             ,width:window.innerWidth*0.4
             ,sortable:false
+            ,align:'center'
 
           },{
             text: 'Equipo'
@@ -44,6 +45,7 @@ Ext.define('TorneoMovil.view.main.Sancionados', {
             ,dataIndex: 'equipo_nombre'
             ,width:window.innerWidth*0.4
             ,sortable:false
+            ,align:'center'
 
           },{
             text: 'Sancion'
@@ -51,6 +53,7 @@ Ext.define('TorneoMovil.view.main.Sancionados', {
             ,dataIndex: 'sancion'
             ,width:window.innerWidth*0.2
             ,sortable:false
+            ,align:'center'
 
           }]
         //,iconCls:'x-fa fa-list'

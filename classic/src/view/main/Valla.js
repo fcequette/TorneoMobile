@@ -2,7 +2,7 @@
 /**
  * This view is an example list of people.
  */
-Ext.define('TorneoMovil.view.main.Valla', {
+Ext.define('Torneo.view.main.Valla', {
     extend: 'Ext.container.Container',
     xtype: 'mainvencida',
     title:'Valla - vencida',
@@ -13,7 +13,7 @@ Ext.define('TorneoMovil.view.main.Valla', {
     height:'100%',
    // modal: true,
     bodyPadding: 10
-
+    //,scrollable:true
     ,items:[{
         xtype:'grid'
       ,store: 'Valla'
@@ -34,6 +34,7 @@ Ext.define('TorneoMovil.view.main.Valla', {
            ,name: 'equipo_nombre'
            ,dataIndex : 'equipo_nombre'
            ,width: window.innerWidth*0.4
+           ,align:'center'
          },{
            text: 'Posicion general'
            ,name: 'pos-gral'
@@ -45,7 +46,7 @@ Ext.define('TorneoMovil.view.main.Valla', {
            ,name: 'prom_gol_rec'
            ,dataIndex : 'prom_gol_rec'
            ,width: window.innerWidth*0.2
-
+           ,align:'center'
          },{
            text: 'Puntos'
            ,name: 'ptos'
@@ -58,6 +59,7 @@ Ext.define('TorneoMovil.view.main.Valla', {
            ,name: 'pj'
            ,dataIndex : 'pj'
            ,width: window.innerWidth*0.2
+           ,align:'center'
 
 
 
@@ -95,6 +97,7 @@ Ext.define('TorneoMovil.view.main.Valla', {
            ,dataIndex : 'gc'
            ,flex: 1
            ,width: window.innerWidth*0.2
+           ,align:'center'
 
          },{
            text: 'Diferencia'

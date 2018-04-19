@@ -18,14 +18,16 @@ Ext.define('TorneoMovil.view.main.Main', {
         'TorneoMovil.view.main.EnCapilla',
         'TorneoMovil.view.main.Posiciones',
         'TorneoMovil.view.main.Valla',
-        'TorneoMovil.view.main.Fixture'
+        'TorneoMovil.view.main.Fixture',
+        'TorneoMovil.view.main.Goleadores'
+
         // 'Ext.grid.feature.Grouping'
 
     ],
 
     controller: 'main',
     viewModel: 'main',
-cls:'formPrincipal',
+    cls:'formPrincipal',
     fullscreen: true,
     items: [
     {
@@ -41,8 +43,8 @@ cls:'formPrincipal',
                 var tab =Ext.ComponentQuery.query('#tabini')[0];
                 tab.removeAll();
                 tab.add({
-                  title: 'Opciones',
-                   iconCls: 'x-fa fa-list'
+                  title: 'Opciones'
+                   // iconCls: 'x-fa fa-list'
                    ,items:[{
                        xtype:'opciones'
                  }]});
@@ -52,9 +54,9 @@ cls:'formPrincipal',
      },{
            xtype:'label'
            ,itemId:'labelHeader'
-           ,style:'color:#FFF'
+           ,style:'color:#FFF;font-size:15px'
            ,html: '<div><div style=padding-left:30px;color:#FFF;font-size:50px;display:inline-block></div><a style="font-weight:bold;color:#FFF">TODA LA GRINGA</a></div>'
-           ,padding: 10
+           ,padding: 1
       }]
      },{
        xtype:'tabpanel',
@@ -93,7 +95,7 @@ cls:'formPrincipal',
        items: [
            {
                title: 'Opciones',
-               iconCls: 'x-fa fa-list',
+               // iconCls: 'x-fa fa-list',
                //,items:[{
                  xtype:'opciones'
 
@@ -114,7 +116,13 @@ cls:'formPrincipal',
 
        ,defaults:{
          style:'background:transparent',
-         margin:'50 0'
+         margin:'50 0',
+         defaultPhonePickerConfig : {
+           doneButton : 'Aceptar',
+           cancelButton : 'Cancelar',
+           style:'background-color:#565656'
+
+         }
        }
        ,items:[{
          xtype:'selectfield'
@@ -171,7 +179,7 @@ cls:'formPrincipal',
          listeners:{
            tap:function(fp,e){
              console.log('mio');
-             Ext.ComponentQuery.query('#labelHeader')[0].setHtml(fp.up().down('#selectTorneo')._value.data.torneo_descri+'<a style="font-weight:bold">></a>'+fp.up().down('#selectCategoria')._value.data.categoria_descri+'<a style="font-weight:bold">></a>'+fp.up().down('#selectZona')._value.data.zona_descri);
+             Ext.ComponentQuery.query('#labelHeader')[0].setHtml(fp.up().down('#selectTorneo')._value.data.torneo_descri+'<a style="font-weight:bold;font-size:1  5px"> >  </a>'+fp.up().down('#selectCategoria')._value.data.categoria_descri+'<a style="font-weight:bold"> > </a>'+fp.up().down('#selectZona')._value.data.zona_descri);
              Ext.ComponentQuery.query('#tabini')[0].show();
              Ext.ComponentQuery.query('#formini')[0].hide();
              Ext.ComponentQuery.query('#tabini')[0].setActiveItem(0);
@@ -198,8 +206,8 @@ cls:'formPrincipal',
               {
                 html:'<img width=120px;height:100px; src="http://dario-casa.sytes.net/Torneo/logo.png" alt="GRUPO BINARIO">'
                 ,padding:'0 0 0 0'
-                ,margin:'200 0 200 110'
-                ,style: 'background-color:transparent'
+                ,margin:'200 0 200 '+window.innerWidth/3
+                ,style: 'background-color:transparent;'
                 ,height:120
               }]
       });

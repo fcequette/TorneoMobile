@@ -878,6 +878,7 @@ $include-torneomovil-application: dynamic(true);;
 $include-torneomovil-store-capilla: dynamic(true);;
 $include-torneomovil-store-categorias: dynamic(true);;
 $include-torneomovil-store-fixture: dynamic(true);;
+$include-torneomovil-store-goleadores: dynamic(true);;
 $include-torneomovil-store-personnel: dynamic(true);;
 $include-torneomovil-store-posiciones: dynamic(true);;
 $include-torneomovil-store-sancionados: dynamic(true);;

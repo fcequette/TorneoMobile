@@ -25,6 +25,7 @@ Ext.define('TorneoMovil.Application', {
         ,'Capilla'
         ,'Valla'
         ,'Fixture'
+        ,'Goleadores'
 
     ],
 

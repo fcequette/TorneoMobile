@@ -2,7 +2,7 @@
 /**
  * This view is an example list of people.
  */
-Ext.define('TorneoMovil.view.main.EnCapilla', {
+Ext.define('Torneo.view.main.EnCapilla', {
     extend: 'Ext.container.Container',
     xtype: 'maincapilla',
     title:'En Capilla',
@@ -13,7 +13,7 @@ Ext.define('TorneoMovil.view.main.EnCapilla', {
     height:'100%',
    // modal: true,
     bodyPadding: 10
-
+,scrollable:true
     ,items:[{
         xtype:'grid'
       ,store: 'Capilla'
@@ -37,12 +37,14 @@ Ext.define('TorneoMovil.view.main.EnCapilla', {
         ,sortable:false
 
         //,flex: 1
+        ,align:'center'
         ,width:window.innerWidth*0.4
       },{
         text: 'Equipo'
         ,name: 'equipo'
         ,dataIndex : 'equipo'
         //,flex: 1
+        ,align:'center'
         ,sortable:false
         ,width:window.innerWidth*0.4
       },{
@@ -50,6 +52,7 @@ Ext.define('TorneoMovil.view.main.EnCapilla', {
         ,name: 'cantamarillas'
         ,dataIndex : 'cantamarillas'
         //,flex: 1
+        ,align:'center'
         ,width:window.innerWidth*0.2
       }]
     }]
