@@ -11,7 +11,7 @@ Ext.define('TorneoMovil.view.main.Opciones', {
 
     defaults:{
       xtype:'button',
-      margin:'20 0',
+      margin:'10 0',
       style: 'background-color: transparent; font-weight: "bold"; font-size:25px;color:#FFF;border:none',
       listeners: {
         tap:function(btn,e) {
