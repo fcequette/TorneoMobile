@@ -4,7 +4,7 @@ Ext.define('TorneoMovil.store.Zonas', {
 	//,model:'Torneo.model.Zona'
 	,proxy: {
 		 type: 'ajax'
-		,url: 'http://dario-casa.sytes.net/api/zona'
+		,url: '/api/zona'
 		,method: 'GET'
 	 	,reader: {
 	 		type: 'json',

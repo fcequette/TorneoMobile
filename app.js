@@ -3,6 +3,7 @@
  * needed for your application, but these edits will have to be merged by
  * Sencha Cmd when upgrading.
  */
+ var development = false;
 Ext.application({
     name: 'TorneoMovil',
 
@@ -25,3 +26,30 @@ Ext.application({
     // of merge conflicts when upgrading to new versions of Sencha Cmd.
     //-------------------------------------------------------------------------
 });
+//Ext.Ajax.cors = true;
+// //Ext.Ajax.useDefaultXhrHeader = false;
+// Ext.Ajax._defaultHeaders = {
+//   'Access-Control-Allow-Origin': "*"
+// };
+Ext.Ajax._defaultHeaders = {
+	 'Content-Type': 'application/json'
+};
+// Ext.Ajax.setDefaultHeaders('Access-Control-Request-Headers', "*/*");
+Ext.Ajax.on('beforerequest', function(connection, options) {
+	if ( development ) {
+		var url = options.url.split('?');
+		//options.url = '///android_asset/www' + url[0] + '.json?' + url[1];
+		options.url = '.' + url[0] + '.json?' + url[1];
+	} else {
+		options.url = 'http://dario-casa.sytes.net' + options.url;
+	}
+});
+
+Ext.MessageBox.OKCANCEL = [
+	{text: 'Cancelar', itemId: 'cancel'},
+	{text: 'OK',     itemId: 'ok',  ui : 'action'}
+];
+Ext.MessageBox.YESNO = [
+	{text: 'No',  itemId: 'no'},
+	{text: 'Si', itemId: 'yes', ui: 'action'}
+];

@@ -4,7 +4,7 @@ Ext.define('TorneoMovil.store.Valla', {
 	//,autoLoad:true
 	,proxy: {
 		type: 'ajax'
-		,url: 'http://dario-casa.sytes.net/api/vallamenosvencida'
+		,url: '/api/vallamenosvencida'
 		,method: 'GET'
 	 	,reader: {
 	 		 type: 'json',

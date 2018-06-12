@@ -14,10 +14,15 @@
          store: 'Fixture',
          grouped: true,
          itemTpl: [
-             '<div class="headshot" style="background-image:url(resources/images/headshots/{equipo1});"></div>',
-             '{equipo1}<tpl if="fixture_estado == \'1\'"> <strong> VS </strong> </tpl>  <tpl if="fixture_estado == \'0\'"><a style="color:red;font-style:bold">({fixture_goles_eq1})</a></tpl>  {equipo2} <tpl if="fixture_estado == \'0\'"> <a style="color:red;font-style:bold">({fixture_goles_eq2})</a></tpl></br>',
-             '<tpl if="fixture_estado == \'1\'"><strong>Cancha: </strong> {cancha},  <strong>Turno:</strong> {turno_descri}</tpl>'
+
+             '<div style="display:inline-block;vertical-align: middle;width:30%;height:40px;text-align: center;line-height: 20px;padding-right: 10px;">{equipo1}</div><div style="width:30%;text-align:center;display:inline-block;height:45px;vertical-align: middle;"> <tpl if="fixture_estado == \'1\'"> <strong style="font-size:15px;font-weight:bold;">Cancha: </strong>{cancha}  </br> <strong style="font-size:15px;font-weight:bold;">Turno:</strong> {turno_descri} </tpl><tpl if="fixture_estado == \'0\'"><a style="font-weight: bold">{fixture_goles_eq1}</a></tpl><tpl if="fixture_estado == \'0\'"> <a style="font-weight: bold;">- {fixture_goles_eq2}</a></tpl></div><div style="padding-left:10px;display:inline-block;width:30%;height:40px;text-align: center;line-height: 20px;vertical-align: middle;">{equipo2}</div> </br>',
+
          ].join('')
+     }
+     ,listeners:{
+      renderedchange:function( ee, item, rendered, eOpts ){
+         Ext.Viewport.remove(Ext.Viewport._items.items[1],true)
+       }
      }
  });
 

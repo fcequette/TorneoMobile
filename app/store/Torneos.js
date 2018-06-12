@@ -13,7 +13,7 @@ Ext.define('TorneoMovil.store.Torneos', {
 ]
 	,proxy: {
 		 	type: 'ajax'
-		 	,url: 'http://dario-casa.sytes.net/api/torneo'
+		 	,url: '/api/torneo'
 			,method: 'GET'
 	 		,reader: {
 	 				type: 'json',

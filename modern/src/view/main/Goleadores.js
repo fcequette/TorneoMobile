@@ -21,9 +21,9 @@
            ,store: 'Goleadores'
            //,features: [{ftype:'grouping'}]
            ,columns: [
-              { text: 'Jugador  ', dataIndex: 'jugador_apellido', width: window.innerWidth*0.4,sortable:false,align:'center' },
-              { text: ' Goles  ', dataIndex: 'goles_cantidad',width: window.innerWidth*0.2,align:'center'},
-              { text: 'Equipo   ', dataIndex: 'equipo_nombre', width: window.innerWidth*0.4,sortable:false,align:'center'  }]
+              { text: 'Jugador  ', dataIndex: 'jugador_apellido', width: window.innerWidth*0.4,sortable:false},
+              { text: ' Goles  ', dataIndex: 'golesXjug',width: window.innerWidth*0.2},
+              { text: 'Equipo   ', dataIndex: 'equipo_nombre', width: window.innerWidth*0.4,sortable:false }]
          }]
      //}
  });

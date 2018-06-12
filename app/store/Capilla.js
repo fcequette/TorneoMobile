@@ -4,7 +4,7 @@ Ext.define('TorneoMovil.store.Capilla', {
 	//,model:'Torneo.model.Amonestado'
 	,proxy: {
 		 	type: 'ajax'
-		 	,url: 'http://dario-casa.sytes.net/api/encapilla'
+		 	,url: '/api/encapilla'
 			//,url: 'https://api.myjson.com/bins/tnlgr'
 			,method: 'GET'
 	 		,reader: {

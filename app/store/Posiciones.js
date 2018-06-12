@@ -10,7 +10,7 @@ Ext.define('TorneoMovil.store.Posiciones', {
 
     proxy: {
       type: 'ajax'
-      ,url: 'http://dario-casa.sytes.net/api/posiciones'
+      ,url: '/api/posiciones'
       ,method: 'GET'
         ,reader: {
             type: 'json',

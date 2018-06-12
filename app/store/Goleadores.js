@@ -10,7 +10,7 @@ Ext.define('TorneoMovil.store.Goleadores', {
 
     proxy: {
       type: 'ajax'
-      ,url: 'http://dario-casa.sytes.net/api/goleadoresporcategoria'
+      ,url: '/api/goleadoresporcategoria'
       ,method: 'GET'
         ,reader: {
             type: 'json',

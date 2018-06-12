@@ -9,8 +9,9 @@ Ext.define('TorneoMovil.store.Fixture', {
 	// 		sortProperty : 'group_index',
 	// }
 	,grouper: {
-		groupFn: function(record) {
-				return '<a style="color:black">FECHA '+ record.get('fecha')[0]+'</a>';
+		style:'background-color:red'
+		,groupFn: function(record) {
+				return '<a style="color:#4b4b4b;font-weight: bold;padding-left:'+window.innerWidth*0.35+'px";>FECHA '+ record.get('fecha')[0]+'</a>';
 		}
 }
 	//  groupField: 'department',
@@ -27,7 +28,7 @@ Ext.define('TorneoMovil.store.Fixture', {
 ]
 	,proxy: {
 		 type: 'ajax'
-		,url: 'http://dario-casa.sytes.net/api/fixture'
+		,url: '/api/fixture'
 		,method: 'GET'
 	 	,reader: {
 	 			type: 'json',

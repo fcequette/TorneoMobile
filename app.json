@@ -79,7 +79,7 @@
          *         // The file used to save sass variables edited via Sencha Inspector and Sencha Themer.
          *         // This file will automatically be applied to the end of the scss build.
          *         "var": "sass/save.scss",
-         *      
+         *
          *         // The directory used to save generated sass sources.
          *         // This directory will automatically be applied to the end of the scss build.
          *         "src": "sass/save"
@@ -378,7 +378,7 @@
      *          "css": "${app.output.resources}/${app.name}-all.css",
      *          "js": {
      *              "path": "app.js",
-     *              // This setting constrols the output language level.  Set to 'ES6' to 
+     *              // This setting constrols the output language level.  Set to 'ES6' to
      *              // disable the transpiler
      *              "version": "ES5"
      *          },
@@ -406,6 +406,35 @@
      *      }
      *
      */
+
+     "phonegap": {
+         "config": {
+             "name": "${app.name}",
+             "id": "com.domain.${app.name}",
+             //"remote": true,
+             "verbose": false,
+             "path": "${app.dir}/phonegap"
+         },
+         "js": [
+             {
+                 "path": "cordova.js",
+                 "remote": true,
+                 "priority": 1000
+             }
+         ],
+         "microloader": "${app.config.dir}/Microloader.js",
+         "output": {
+             "base": "${app.phonegap.config.path}/www",
+             "page": "index.html",
+             "manifest": "${build.id}.json",
+             "appCache": {
+                 "enable": false
+             }
+         },
+         "cache": {
+             "enable": false
+         }
+     },
 
     "output": {
         "base": "${workspace.build.dir}/${build.environment}/${app.name}",
@@ -531,9 +560,18 @@
                     "var": "modern/sass/save.scss",
                     "src": "modern/sass/save"
                 }
+            },
+            "packager": "phonegap",
+            "phonegap": {
+                "config": {
+                    "platform": "android",
+                    //"remote":true,
+                    "id": "com.mydomain.MyApp"
+                  }
+              }
             }
-        }
-    },
+
+      },
 
     /**
      * File / directory name patttern to ignore when copying to the builds. Must be a

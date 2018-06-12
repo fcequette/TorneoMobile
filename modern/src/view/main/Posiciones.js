@@ -3,19 +3,19 @@
  * This view is an example list of people.
  */
 Ext.define('TorneoMovil.view.main.Posiciones', {
-    extend: 'Ext.container.Container',
+    extend: 'Ext.grid.Grid',
     xtype: 'posiciones',
-    title:'Posiciones',
-    // requires: [
-    //
-    // ],
-    width:'100%',
-    height:'100%',
-   // modal: true,
-    bodyPadding: 10
-
-    ,items:[{
-        xtype:'grid',
+   //  title:'Posiciones',
+   //  // requires: [
+   //  //
+   //  // ],
+   //  width:'100%',
+   //  height:'100%',
+   // // modal: true,
+   //  bodyPadding: 10
+   //
+   //  ,items:[{
+       // xtype:'grid',
         width:'100%',
         height:'100%'
         ,title: 'Posiciones'
@@ -33,5 +33,5 @@ Ext.define('TorneoMovil.view.main.Posiciones', {
            { text: 'G.a.F', dataIndex: 'gf', width: 70 ,sortable: false,hidden:true},
            { text: 'Dif ', dataIndex: 'dif', width: window.innerWidth*0.2,sortable: false }
         ]
-      }]
+      //}]
 });
