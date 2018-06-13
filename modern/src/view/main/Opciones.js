@@ -24,9 +24,9 @@ Ext.define('TorneoMovil.view.main.Opciones', {
                ,items:[{
                    xtype:'opciones'
              }]});
-             Ext.Viewport.add({
-               xtype: 'loadmask'
-            });
+            //  Ext.Viewport.add({
+            //    xtype: 'loadmask'
+            // });
             var  a =tab.add({
               title: btn.tabText,
               iconCls: btn.tabIcon,
