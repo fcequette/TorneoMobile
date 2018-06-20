@@ -121,8 +121,8 @@ Ext.define('TorneoMovil.view.main.Main', {
             height:'100%',
             itemId:'tabini',
             //style:'background-color:green',
-            style:'background:url("http://dario-casa.sytes.net/home-header.jpg");background-size:100%;',
-           // style:'background:url("http://dario-casa.sytes.net/Torneo/gcl_Wallpapers.jpg");background-size:100%;',
+            style:'background:url("http://todalagringa.com.ar/home-header.jpg");background-size:100%;',
+           // style:'background:url("http://todalagringa.com.ar/Torneo/gcl_Wallpapers.jpg");background-size:100%;',
             hidden:true,
             tabBar: {
               style:'background-color: #f5f5f5;'
@@ -168,12 +168,12 @@ Ext.define('TorneoMovil.view.main.Main', {
          // modal: true,
           bodyPadding: 10,
           style: {
-            background: 'url("http://dario-casa.sytes.net/home-header.jpg")!important;background-size:100%;'
+            background: 'url("http://todalagringa.com.ar/home-header.jpg")!important;background-size:100%;'
           }
 
           ,defaults:{
             style:'background:transparent',
-            // background: 'url("http://dario-casa.sytes.net/home-header.jpg")!important;background-size:100%;'
+            // background: 'url("http://todalagringa.com.ar/home-header.jpg")!important;background-size:100%;'
             margin:'100 '+ window.innerWidth/2.7,
           }
           ,items:[{

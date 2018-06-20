@@ -64,8 +64,8 @@ Ext.define('TorneoMovil.view.main.Main', {
        height:'100%',
        itemId:'tabini',
        //style:'background-color:green',
-       style:'background:url("http://dario-casa.sytes.net/home-header.jpg");background-size:cover;background-position:center!important',
-      // style:'background:url("http://dario-casa.sytes.net/Torneo/gcl_Wallpapers.jpg");background-size:100%;',
+       style:'background:url("http://todalagringa.com.ar/home-header.jpg");background-size:cover;background-position:center!important',
+      // style:'background:url("http://todalagringa.com.ar/Torneo/gcl_Wallpapers.jpg");background-size:100%;',
        hidden:true,
        tabBar: {
          style:'background-color: #f5f5f5;'
@@ -111,7 +111,7 @@ Ext.define('TorneoMovil.view.main.Main', {
       // modal: true,
        bodyPadding: 10
        // ,style: {
-       //    background: 'url("http://dario-casa.sytes.net/home-header.jpg")!important;background-size:100%;';
+       //    background: 'url("http://todalagringa.com.ar/home-header.jpg")!important;background-size:100%;';
        //    background-size:'100% 100% !important' ;
        //    background-repeat: 'no-repeat!important';
        //    background-position: 'center!important';
@@ -207,7 +207,7 @@ Ext.define('TorneoMovil.view.main.Main', {
               }
               , items: [
               {
-                html:'<img width=120px;height:100px; src="http://dario-casa.sytes.net/Torneo/logo.png" alt="GRUPO BINARIO">'
+                html:'<img width=120px;height:100px; src="http://todalagringa.com.ar/Torneo/logo.png" alt="GRUPO BINARIO">'
                 ,padding:'0 0 0 0'
                 ,margin:'200 0 200 '+window.innerWidth/3
                 ,style: 'background-color:transparent;'
